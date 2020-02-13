@@ -24,5 +24,7 @@ Ingredient.create(name: "Tomato juice")
 Ingredient.create(name: "Apple cider")
 Ingredient.create(name: "Espresso")
 Ingredient.create(name: "Blackberry brandy")
+Ingredient.create(name: "Light rum")
+Ingredient.create(name: "Applejack")
 
 puts 'Done ! 🤙'

@@ -1,0 +1,55 @@
+.card {
+  border-radius: 5px;
+  margin: 25px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.landing-card {
+  background-color: rgb(253, 253, 248);
+  position: relative;
+  bottom: 0px;
+  transition: 0.3s;
+  border: 1px solid #808080;
+}
+
+.landing-card:hover {
+  bottom: 4px;
+}
+
+.card-new-cocktail {
+  background-color: #181818;
+  color: $beige;
+  border-radius: 7px;
+  margin: 25px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  letter-spacing: 8px;
+  color: $beige;
+  border-bottom: 1px solid $beige;
+}
+
+.card-cocktail {
+  background-color: #181818;
+  color: $beige;
+  border-radius: 5px;
+  margin: 25px;
+  border-bottom: 1px solid $beige;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-link {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $beige;
+  font-size: 12px;
+  &:hover {
+    text-decoration: line-through;
+    color: $beige;
+  }
+}
+
+.recipe {
+  font-weight: lighter;
+}
+

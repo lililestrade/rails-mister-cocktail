@@ -1,9 +1,16 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+// @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?Scheherazade&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap");
+
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+
+// $body-font: "Open Sans", "Helvetica", "sans-serif";
+// $headers-font: "Raleway", "Helvetica", "sans-serif";
+$body-font: 'Source Sans Pro', sans-serif;
+$headers-font: 'Scheherazade', serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -14,3 +21,5 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+

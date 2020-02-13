@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="title d-flex justify-content-center">
+    <h1>ADD A NEW INGREDIENT:</h1>
+  </div>
+
+  <div class="card card-details card-new-cocktail">
+
+    <div class="form-group">
+
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient %>
+
+      <div class="button-create d-flex justify-content-center">
+        <%= f.button :submit, "ADD", class: "btn-form" %>
+      </div>
+
+    <% end %>
+
+    </div>
+  </div>
+</div>
