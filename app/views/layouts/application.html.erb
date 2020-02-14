@@ -15,6 +15,11 @@
   <body>
     <%= yield %>
 
+    <div class="footer d-flex justify-content-center flex-column align-items-center">
+      <%= image_tag 'snakes.png', width: 300, id: 'hand' %>
+      <p>This website was coded with 🖤 (and tears).</p>
+    </div>
+
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

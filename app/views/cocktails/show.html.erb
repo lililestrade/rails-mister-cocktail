@@ -1,32 +1,30 @@
+<div class="banner d-flex justify-content-center flex-column align-items-center mt-3">
+  <%= image_tag 'hand.png', width: 300, id: 'hand' %>
+</div>
+
 <div class="container d-flex justify-content-center">
-
   <div class="card card-cocktail" style="width: 25rem;">
-
     <div class="card-body ">
-
       <h3 class="card-title"><%= @cocktail.name %></h3>
 
-      <!-- <h6 class="card-subtitle mb-2 text-muted">blablabla</h6> -->
       <div class="flex-column align-items-center">
-<!--         <div class="bg-white border"> -->
         <% @cocktail.doses.each do |dose| %>
           <div class="d-flex justify-content-between mt-4 recipe">
             <div class="box-delete">
               <div class="btn-delete">
-                <%= link_to "X", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+                <%= link_to "DELETE", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
               </div>
             </div>
             <p><%= dose.ingredient.name %></p>
             <p><%= dose.description %></p>
           </div>
         <% end %>
-
           <div class="d-flex justify-content-between border-top mt-4">
             <%= link_to 'BACK TO LIST', cocktails_path, class: "card-link" %>
             <%= link_to 'ADD AN INGREDIENT', new_cocktail_dose_path(@cocktail), class: "card-link" %>
           </div>
-<!--         </div> -->
       </div>
+
     </div>
   </div>
 </div>

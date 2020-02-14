@@ -19,32 +19,25 @@
     }
 }
 
-.btn:hover {
-  color: $beige;
-  background-color: #181818;
-  // border: 1px solid black;
-  text-align: center;
-  font-weight: bold;
-}
-
 .btn-form {
-  color: $beige; // black
-  font-family: 'Scheherazade', serif;
-  font-size: 20px;
-  letter-spacing: 8px;
+  color: $beige;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  letter-spacing: 3px;
   border-radius: 50px;
-  border: 1px solid $beige; // black
+  border: 1px solid $beige;
   text-align: center;
-  padding: 11px 19px 10px 23px;
+  vertical-align: middle;
+  padding: 9px 17px 8px 21px;
   font-weight: lighter;
   transition: 0.3s;
-}
-
-.btn-form:hover {
-  color: black; // $beige
-  background-color: $beige; // black
-  text-align: center;
-  font-weight: bold;
+    &:hover {
+      color: #181818;
+      background-color: $beige;
+      // border: 1px solid black;
+      text-align: center;
+      font-weight: bold;
+    }
 }
 
 .btn-recipe {
@@ -60,7 +53,7 @@
 
 // essai bouton
 .box-delete {
-  padding-top: 14px;
+  padding-top: 16px;
 }
 
 .btn-delete {
@@ -120,3 +113,54 @@
   border: none;
   background-color: $beige; //rgba(255,255,255,0)
 }
+
+// BUTTON CREATE COCKTAIL
+.btn-one {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+.btn-one span {
+    transition: all 0.3s;
+}
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+    letter-spacing: 2px;
+}
+.btn-one:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
