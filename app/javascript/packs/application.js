@@ -17,4 +17,23 @@
 
 import 'bootstrap';
 
-console.log('Hello World from Webpacker')
+// const image = document.querySelector("#box-image");
+
+// image.style.display = "none";
+
+// const myFunction = () => {
+//   const image = document.getElementById("myDIV");
+//   if (image.style.display === "none") {
+//     image.style.display = "block";
+//   } else {
+//     image.style.display = "none";
+//   }
+// }
+
+let image = document.querySelector(".img-toggled");
+
+const button = document.querySelector("#btn-toggle-img");
+
+button.addEventListener('click', event => {
+  image.classList.toggle("d-none");
+});

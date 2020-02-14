@@ -44,6 +44,8 @@ gem 'simple_form'
 
 gem 'rest-client', '~> 2.0.1'
 
+gem 'cloudinary', '~> 1.12.0'
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
