@@ -11,8 +11,13 @@
 <!--         <div class="bg-white border"> -->
         <% @cocktail.doses.each do |dose| %>
           <div class="d-flex justify-content-between mt-4 recipe">
-              <p><%= dose.ingredient.name %></p>
-              <p><%= dose.description %></p>
+            <div class="box-delete">
+              <div class="btn-delete">
+                <%= link_to "X", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
+              </div>
+            </div>
+            <p><%= dose.ingredient.name %></p>
+            <p><%= dose.description %></p>
           </div>
         <% end %>
 
@@ -25,3 +30,4 @@
     </div>
   </div>
 </div>
+

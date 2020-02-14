@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # post "cocktails"
 
   resources :cocktails, only: [:index, :show, :new, :create] do
-    resources :doses, only: [:new, :create]
+    resources :doses, only: %w[new create destroy], shallow: true
   end
 end
 
