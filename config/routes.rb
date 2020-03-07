@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :doses, only: %w[new create destroy], shallow: true
   end
 
-  root to: 'cocktails#index';
+  root to: 'cocktails#index', as: '/'
+  # root to: 'cocktails#index';
 end
 
