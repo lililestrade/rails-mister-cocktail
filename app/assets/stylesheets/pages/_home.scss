@@ -1,5 +1,5 @@
 // Specific CSS for your home-page
-// @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 // @import "bootstrap";
 
 // body {
@@ -15,7 +15,7 @@ background-color: #f2dede;
 border-color: #eed3d7;
 color: #b94a48;
 text-align: left;
-font-size: .8em;
+font-size: 14px;
 }
 
 .alert-alert {
@@ -23,7 +23,7 @@ background-color: #f2dede;
 border-color: #eed3d7;
 color: #b94a48;
 text-align: left;
-font-size: .8em;
+font-size: 14px;
 }
 
 .alert-success {
@@ -39,5 +39,5 @@ background-color: #dff0d8;
 border-color: #d6e9c6;
 color: #468847;
 text-align: left;
-font-size: .8em;
+font-size: 14px;
 }
