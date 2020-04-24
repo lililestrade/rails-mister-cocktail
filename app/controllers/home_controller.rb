@@ -6,8 +6,10 @@ class HomeController < ApplicationController
   def create
     @contact = Home.new(params[:home])
     @contact.request = request
+
     respond_to do |format|
-      if @contact.deliver
+
+      if verify_recaptcha(model: @contact) && @contact.deliver
         # re-initialize Home object for cleared form
         @contact = Home.new
         format.html { render 'index'}
@@ -16,6 +18,8 @@ class HomeController < ApplicationController
         format.html { render 'index' }
         format.js   { flash.now[:error] = @message = "Message did not send." }
       end
+
     end
   end
 end
+
