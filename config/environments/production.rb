@@ -94,19 +94,35 @@ Rails.application.configure do
 
 
 
+  # config.action_mailer.default_url_options = { :host => 'mister-cocktail-lulu.herokuapp.com' }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.default :charset => "utf-8"
+  # config.action_mailer.smtp_settings = {
+  #   address:              'smtp.gmail.com',
+  #   port:                 587,
+  #   domain:               'mister-cocktail-lulu.herokuapp.com',
+  #   user_name:            ENV["GMAIL_EMAIL"],
+  #   password:             ENV["GMAIL_PASSWORD"],
+  #   authentication:       'plain',
+  #   enable_starttls_auto: true
+  # }
+
   config.action_mailer.default_url_options = { :host => 'mister-cocktail-lulu.herokuapp.com' }
-  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'mister-cocktail-lulu.herokuapp.com',
     user_name:            ENV["GMAIL_EMAIL"],
     password:             ENV["GMAIL_PASSWORD"],
-    authentication:       :plain,
-    enable_starttls_auto: true }
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
 
 
 end
