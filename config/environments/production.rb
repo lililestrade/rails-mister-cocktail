@@ -92,6 +92,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+
+
   config.action_mailer.default_url_options = { :host => 'mister-cocktail-lulu.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
@@ -103,7 +105,7 @@ Rails.application.configure do
     domain:               'mister-cocktail-lulu.herokuapp.com',
     user_name:            ENV["GMAIL_EMAIL"],
     password:             ENV["GMAIL_PASSWORD"],
-    authentication:       'plain',
+    authentication:       :plain,
     enable_starttls_auto: true }
 
 
